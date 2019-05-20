@@ -3,10 +3,10 @@ session_start();
 error_reporting(0);
 include('includes/config.php');
 if(strlen($_SESSION['login'])==0)
-    {   
+    {
 header('location:index.php');
 }
-else{ 
+else{
 if(isset($_GET['del']))
 {
 $id=$_GET['del'];
@@ -28,7 +28,9 @@ header('location:manage-books.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Online Library Management System | Manage Issued Books</title>
+    <title>Library Management System | Manage Issued Books</title>
+    <!-- icon -->
+    <link rel="icon" href="assets/favicon/favicon.png" sizes="32x32">
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -51,14 +53,14 @@ header('location:manage-books.php');
             <div class="col-md-12">
                 <h4 class="header-line">Manage Issued Books</h4>
     </div>
-    
+
 
             <div class="row">
                 <div class="col-md-12">
                     <!-- Advanced Tables -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                          Issued Books 
+                          Issued Books
                         </div>
                         <div class="panel-body">
                             <div class="table-responsive">
@@ -74,7 +76,7 @@ header('location:manage-books.php');
                                         </tr>
                                     </thead>
                                     <tbody>
-<?php 
+<?php
 $sid=$_SESSION['stdid'];
 $sql="SELECT tblbooks.BookName,tblbooks.ISBNNumber,tblissuedbookdetails.IssuesDate,tblissuedbookdetails.ReturnDate,tblissuedbookdetails.id as rid,tblissuedbookdetails.fine from  tblissuedbookdetails join tblstudents on tblstudents.StudentId=tblissuedbookdetails.StudentId join tblbooks on tblbooks.id=tblissuedbookdetails.BookId where tblstudents.StudentId=:sid order by tblissuedbookdetails.id desc";
 $query = $dbh -> prepare($sql);
@@ -85,7 +87,7 @@ $cnt=1;
 if($query->rowCount() > 0)
 {
 foreach($results as $result)
-{               ?>                                      
+{               ?>
                                         <tr class="odd gradeX">
                                             <td class="center"><?php echo htmlentities($cnt);?></td>
                                             <td class="center"><?php echo htmlentities($result->BookName);?></td>
@@ -101,13 +103,13 @@ foreach($results as $result)
                                         }
                                             ?></td>
                                               <td class="center"><?php echo htmlentities($result->fine);?></td>
-                                         
+
                                         </tr>
- <?php $cnt=$cnt+1;}} ?>                                      
+ <?php $cnt=$cnt+1;}} ?>
                                     </tbody>
                                 </table>
                             </div>
-                            
+
                         </div>
                     </div>
                     <!--End Advanced Tables -->
@@ -115,7 +117,7 @@ foreach($results as $result)
             </div>
 
 
-            
+
     </div>
     </div>
     </div>

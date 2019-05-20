@@ -19,6 +19,8 @@ else{
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Library Management System | Manage Issued Books</title>
+    <!-- icon -->
+    <link rel="icon" href="assets/favicon/favicon.png" sizes="32x32">
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->

@@ -2,7 +2,7 @@
 session_start();
 error_reporting(0);
 include('includes/connect.php');
-if(strlen($_SESSION['admin_ID'])==0)
+if(strlen($_SESSION['admin_sid'])==0)
     {
 header('location:index.php');
 }
@@ -17,7 +17,9 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Online Library Management System | Add Book</title>
+    <title>Library Management System | Add Book</title>
+    <!-- icon -->
+    <link rel="icon" href="assets/favicon/favicon.png" sizes="32x32">
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -29,7 +31,7 @@ else{
 
 </head>
 <body>
-      <!------MENU SECTION START-->
+      <!--MENU SECTION START-->
 <?php include('includes/header.php');?>
 <!-- MENU SECTION END-->
     <div class="content-wrapper">
@@ -92,3 +94,4 @@ Book Info
     <script src="assets/js/custom.js"></script>
 </body>
 </html>
+<?php } ?>

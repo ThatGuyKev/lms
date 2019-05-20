@@ -27,7 +27,9 @@ header('location:manage-books.php');
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Online Library Management System | Manage Books</title>
+    <title>Library Management System | Manage Books</title>
+    <!-- icon -->
+    <link rel="icon" href="assets/favicon/favicon.png" sizes="32x32">
 
     <script src="assets/js/custom.js"></script>
     <!-- BOOTSTRAP CORE STYLE  -->

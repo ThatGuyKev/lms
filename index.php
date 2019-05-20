@@ -14,7 +14,9 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Online Library Management System | </title>
+    <title>Library Management System | </title>
+		<!-- icon -->
+		<link rel="icon" href="assets/favicon/favicon.png" sizes="32x32">
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
@@ -55,7 +57,7 @@ else{
 <label>Password</label>
 <input class="form-control" type="password" name="password" required autocomplete="off"  />
 </div>
- <button type="submit" name="login" class="btn btn-info">LOGIN </button> 
+ <button type="submit" name="login" class="btn btn-info">LOGIN </button>
 </form>
  </div>
 </div>

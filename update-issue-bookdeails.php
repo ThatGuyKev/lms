@@ -31,6 +31,8 @@ header('location:manage-issued-books.php');
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Library Management System | Issued Book Details</title>
+    <!-- icon -->
+    <link rel="icon" href="assets/favicon/favicon.png" sizes="32x32">
     <!-- BOOTSTRAP CORE STYLE  -->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
     <!-- FONT AWESOME STYLE  -->
