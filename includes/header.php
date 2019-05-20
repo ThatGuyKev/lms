@@ -1,3 +1,21 @@
+<style>
+.header {
+  padding: 10px 16px;
+}
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+</style>
   <div class="navbar navbar-inverse set-radius-zero" >
         <div class="container">
             <div class="navbar-header">
@@ -19,8 +37,8 @@
         </div>
     </div>
     <!-- LOGO HEADER END-->
-    <section class="menu-section" >
-        <div class="container">
+    <section class="menu-section" id="myHeader" style="z-index: 9999;" >
+        <div class="container" >
             <div class="row ">
                 <div class="col-md-12">
                     <div class="navbar-collapse collapse ">
@@ -67,3 +85,17 @@
             </div>
         </div>
     </section>
+    <script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
