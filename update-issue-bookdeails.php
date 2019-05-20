@@ -126,7 +126,7 @@ foreach($results as $result)
 </div>
 
 <div class="form-group">
-<label>Book Name :</label>
+<label>Book Title :</label>
 <?php echo htmlentities($result->Title);?>
 </div>
 

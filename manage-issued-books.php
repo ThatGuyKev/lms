@@ -97,6 +97,7 @@ else{
                                             <th>#</th>
                                             <th>Issue ID</th>
                                             <th>Student Name</th>
+                                            <th>Class</th>
                                             <th>Book Title</th>
                                             <th>Issued Date</th>
                                             <th>Return Date</th>
@@ -107,7 +108,7 @@ else{
                                       <?php
                                       if(isset($_GET['returned'])) {
                                       $returned = $_GET['returned'];
-                                      $sql = "SELECT borrow.borrowID as rid, students.studentName, books.Title, borrow.issueDate, borrow.returnDate FROM borrow, students, books
+                                      $sql = "SELECT borrow.borrowID as rid, students.studentName, students.class, books.Title, borrow.issueDate, borrow.returnDate FROM borrow, students, books
                                       WHERE  borrow.studentID = students.studentID AND  borrow.bookID = books.bookID AND borrow.returned=$returned ";
                                       $query = $dbh -> prepare($sql);
                                       $query->execute();
@@ -121,6 +122,7 @@ else{
                                                                                   <td class="center"><?php echo htmlentities($cnt);?></td>
                                                                                   <td class="center"><?php echo htmlentities($result->rid);?></td>
                                                                                   <td class="center"><?php echo htmlentities($result->studentName);?></td>
+                                                                                  <td class="center"><?php echo htmlentities($result->class);?></td>
                                                                                   <td class="center"><?php echo htmlentities($result->Title);?></td>
                                                                                   <td class="center"><?php echo htmlentities($result->issueDate);?></td>
                                                                                   <td class="center"><?php if($result->returnDate=="")
@@ -140,7 +142,7 @@ else{
                                                                               </tr>
                                        <?php $cnt=$cnt+1;}}}
                                        else{ ?>
-                                        <?php $sql = "SELECT borrow.borrowID as rid, students.studentName, books.Title, borrow.issueDate, borrow.returnDate FROM borrow, students, books
+                                        <?php $sql = "SELECT borrow.borrowID as rid, students.studentName, students.class, books.Title, borrow.issueDate, borrow.returnDate FROM borrow, students, books
                                         WHERE  borrow.studentID = students.studentID AND  borrow.bookID = books.bookID";
                                         $query = $dbh -> prepare($sql);
                                         $query->execute();
@@ -154,6 +156,7 @@ else{
                                             <td class="center"><?php echo htmlentities($cnt);?></td>
                                             <td class="center"><?php echo htmlentities($result->rid);?></td>
                                             <td class="center"><?php echo htmlentities($result->studentName);?></td>
+                                            <td class="center"><?php echo htmlentities($result->class);?></td>
                                             <td class="center"><?php echo htmlentities($result->Title);?></td>
                                             <td class="center"><?php echo htmlentities($result->issueDate);?></td>
                                             <td class="center"><?php if($result->returnDate=="")
