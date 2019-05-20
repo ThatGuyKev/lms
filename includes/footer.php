@@ -1,8 +1,8 @@
    <section class="footer-section">
-        <div class="container">
+        <div class="container" >
             <div class="row">
                 <div class="col-md-12">
-                   &copy; 2019 Library Management System |  Little Hands 
+                   &copy; 2019 Library Management System |  Little Hands
                 </div>
 
             </div>
