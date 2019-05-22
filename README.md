@@ -1,20 +1,16 @@
-Library Management | PHP App
+# Library Management | PHP App
 
-////////////////////////////////////////////////////////////////////////////
 This PHP application is a Library Management System for Little Hands School
-///////////////////////////////////////////////////////////////////////////
 
 
 In order to use this application first you need WAMP installed and create folder lms in www folder inside the WAMP directory so that you can use localhost to run this application. Then you need to copy all of these files to lms folder and also you need to create database called lms and add sql file in phpmyadmin dashboard..
 
-/////////////////////////////////////////////////////////////////////////////////////
-Admin credentials :
+# Admin credentials :
 
 username : admin
 password : admin
 
-////////////////////////////////////////////////////////////////////////////////////
-Setting up WAMP ....
+# Setting up WAMP ....
 
 1. download WAMP server from the official website http://www.wampserver.com/en/#download-wrapper
 2. follow the instructions in downloading and installing WAMP server
@@ -22,8 +18,7 @@ Setting up WAMP ....
 4. default directory for WAMP server is C:\wamp64 if you are using 64bit windows or C:\wamp if you are using 32bit windows
 5. in the above directory you will find your "www" folder.
 
-//////////////////////////////////////////////////////////////////////////////////////
-Setting up database .....
+# Setting up database .....
 
 1. open your internet browser
 2. type inside the navigation bar "localhost" and press Enter. you should see WAMP server front pannel with server configuration on it. if it didn't work try "localhost:8080"
@@ -37,8 +32,7 @@ Setting up database .....
 10. once you have chosen the file press "GO"
 11. now the database should be set and ready to GO!
 
-//////////////////////////////////////////////////////////////////////////////////////
-Running the application .....
+# Running the application .....
 
 1. open your internet browser
 2. type inside the navigation bar "http://localhost/lms"
